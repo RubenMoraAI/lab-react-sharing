@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rerender {
+  animation: rerender 1s linear forwards;
+}
+
+.component {
+  animation: blink 1s ease-out forwards;
+}
+
+@keyframes rerender {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #0f172a;
+  }
+  50% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #0f172a;
+  }
+}
+
+@layer components{
+  .btn-outline {
+    @apply inline-flex items-center py-2 px-4 text-sm font-medium  bg-transparent border  focus:z-10 focus:ring-2 focus:ring-gray-500  focus:text-white border-white text-white hover:text-white hover:bg-gray-700 focus:bg-gray-700;
+  }
+  .btn-outline-pushed {
+    @apply
+    inline-flex items-center py-2 px-4 text-sm font-medium border focus:z-10 focus:ring-2 bg-indigo-800 border-white text-white hover:text-white hover:bg-indigo-800 focus:ring-indigo-300 focus:text-white
+  }
+}
