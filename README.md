@@ -35,7 +35,7 @@ If you want to run the project with turbo and tailwind css use
 yarn dev-turbo 
 ```
 
-## little explanation of code
+## Little explanation of code
 This code is a simple Next.js 13 application, and this repository is a lab to show some sharing data between components problems and solutions. 
 
 This code uses all the code in the src folder, now, Next.js 13 uses the app directory, and all page.tsx has its own component directory with all components used; in this case, the project has only one page. 
