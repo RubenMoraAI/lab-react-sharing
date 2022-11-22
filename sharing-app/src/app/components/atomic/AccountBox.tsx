@@ -19,11 +19,11 @@ export const AccountBox = ({ onClick }: AccountBoxProps) => {
         onBlur={e => handleBlur(e)}
         value={amount}
         type="number"
-        className="h-14  px-8 bg-slate-800 hover:bg-slate-700  border border-slate-500 border-1 rounded-lg z-0 focus:shadow focus:outline-none"
+        className="h-14  w-full  px-8 bg-slate-800 hover:bg-slate-700  border border-slate-500 border-1 rounded-lg z-0 focus:shadow focus:outline-none"
         placeholder="Amount..."
       />
       <div className="absolute top-2 right-1">
-        <button onClick={handleClick} className="h-10  px-2 text-white rounded-r-md bg-indigo-700 hover:bg-indigo-800">
+        <button onClick={handleClick} className="h-10 mr-2 px-4   text-white rounded-r-md bg-indigo-700 hover:bg-indigo-800">
           Send
         </button>
       </div>
