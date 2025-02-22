@@ -11,7 +11,7 @@ export const WithRedux = () => {
     <Provider store={store}>
       <VisualComponent
         title="Blockchain"
-        description="Using Redux to share data, this method separates the logic in a store, like a provider option, needs to wrap the children, and only the real clients need to add logic to use this.">
+        description="Using Redux to share data, this method centralizes logic in a store, similar to a provider. Child components are wrapped by the store, but only direct consumers implement specific logic.">
         <div className="grid grid-rows-2 md:grid-cols-2 md:gap-4 md:grid-rows-1">
           <Exchange />
           <Wallet />

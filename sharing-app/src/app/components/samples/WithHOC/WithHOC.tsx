@@ -13,7 +13,7 @@ export const WithHOC = () => {
   return (
     <VisualComponent
       title="Blockchain"
-      description="Using HOC to share data, his method maintains the data in a common parent and needs children as a wrapper to access a specific component and inject the data with props.">
+      description="Using HOC to share data, this method keeps the data in a common parent and wraps child components to provide access to specific components, injecting data through props.">
       <div className="grid grid-rows-2 md:grid-cols-2 md:gap-4 md:grid-rows-1">
         <Exchange>
           <ExchangeAccount exchangeAmount={amounts.exchange} sendFromExchangeToWallet={sendFromExchangeToWallet} />

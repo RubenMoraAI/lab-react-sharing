@@ -8,7 +8,7 @@ import { AccountManagerProvider } from './context/AccountManager.context'
 export const WithContext = () => {
   return (
     <AccountManagerProvider>
-      <VisualComponent title="Blockchain" description="Using Context to share data, this method separates the logic into a provider. They need to wrap the children, but only the real clients need to add logic using this.">
+      <VisualComponent title="Blockchain" description="With Context, data-sharing logic is encapsulated within a provider. Child components are wrapped by the provider, while only direct consumers implement specific logic.">
         <div className="grid grid-rows-2 md:grid-cols-2 md:gap-4 md:grid-rows-1">
           <Exchange />
           <Wallet />

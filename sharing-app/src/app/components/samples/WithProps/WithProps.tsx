@@ -11,7 +11,7 @@ export const WithProps = () => {
   return (
     <VisualComponent
       title="Blockchain"
-      description="Using Props to share data, this method maintains the data in a common parent and passes data onto props for all children every time, inclusive, even when other do not use this.">
+      description="Using Props to share data, this method keeps the data in a common parent and passes it down to all child components through props, even if some do not use it.">
       <div className="grid grid-rows-2 md:grid-cols-2 md:gap-4 md:grid-rows-1">
         <Exchange exchangeAmount={amounts.exchange} sendFromExchangeToWallet={sendFromExchangeToWallet} />
         <Wallet walletAmount={amounts.wallet} sendFromWalletToExchange={sendFromWalletToExchange} />

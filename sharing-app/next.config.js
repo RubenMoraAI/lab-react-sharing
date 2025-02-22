@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  experimental: {
-    appDir: true
-  },
-  typescript: { 
+  reactStrictMode: true, 
+  typescript: {
     ignoreBuildErrors: true,
   },
 }
