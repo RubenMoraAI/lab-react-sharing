@@ -1,8 +1,9 @@
 'use client'
 import { useDispatch, useSelector } from 'react-redux'
-import { VisualComponent, AccountBox } from '../../atomic'
 import { sendFromExchangeToWallet } from './redux/states/account'
 import { RootState } from './redux/store'
+import VisualComponent from '../../atomic/VisualComponent'
+import AccountBox from '../../atomic/AccountBox'
 
 export const ExchangeAccount = () => {
   const dispatcher = useDispatch()

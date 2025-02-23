@@ -1,7 +1,7 @@
 'use client'
 
-import { useShareOptionContext } from '../context/ShareOption.context'
-import { componentsByShareOption, ComponentsByShareOptionKey } from './components'
+import { useShareOptionContext } from '../context/ShareOption.context' 
+import { componentsByShareOption, ComponentsByShareOptionKey } from './components/layout/data/sharingOptions.data'
 
 export const HomePage = () => {
   const { shareOptionContextValue } = useShareOptionContext()

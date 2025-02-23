@@ -1,7 +1,8 @@
 'use client'
 
-import { VisualComponent, AccountBox } from '../../atomic'
 
+import AccountBox from '../../atomic/AccountBox'
+import VisualComponent from '../../atomic/VisualComponent'
 import { useAmountsStore } from './store/useAmountsStore'
 export const WalletAccount = () => {
   const walletAmount = useAmountsStore(state => state.wallet)

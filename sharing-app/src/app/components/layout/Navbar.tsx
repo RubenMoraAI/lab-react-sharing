@@ -5,8 +5,8 @@ import { AiOutlineRead } from 'react-icons/ai'
 import { AiFillGithub } from 'react-icons/ai'
 
 export const menu = [
-  { icon: <AiFillGithub className="  mx-1 text-xl" />, title: 'Github', url: process.env.NEXT_PUBLIC_GITHUB_URL || '/' },
-  { icon: <AiOutlineRead className="  mx-1 text-xl" />, title: 'Read article', url: process.env.NEXT_PUBLIC_ARTICLE_URL || '/'  }
+  { icon: <AiFillGithub className="mx-1 text-xl" data-testid="icon-Github" />, title: 'Github', url: process.env.NEXT_PUBLIC_GITHUB_URL || '/' },
+  { icon: <AiOutlineRead className="mx-1 text-xl" data-testid="icon-Read article" />, title: 'Read article', url: process.env.NEXT_PUBLIC_ARTICLE_URL || '/' }
 ]
 
 export const Navbar = () => {
@@ -20,7 +20,7 @@ export const Navbar = () => {
           <ul className="flex  p-4 items-center content-center rounded-lg  flex-row space-x-8 mt-0 text-sm font-medium border-0 ">
             {menu.map((item, index) => (
               <li key={index}>
-                <Link href={item.url} className="block py-2 pr-4 pl-3 text-white hover:text-indigo-300  rounded md:bg-transparent md:p-0 dark:text-white">
+                <Link href={item.url} target="_blank" className="block py-2 pr-4 pl-3 text-white hover:text-indigo-300  rounded md:bg-transparent md:p-0 dark:text-white">
                   <span className="flex flex-row content-center">
                     {item.icon} {item.title}
                   </span>

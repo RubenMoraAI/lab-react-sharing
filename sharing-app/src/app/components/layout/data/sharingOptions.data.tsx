@@ -1,8 +1,9 @@
-import { WithProps } from '../../samples/WithProps'
-import { WithHOC } from '../../samples/WithHOC'
-import { WithRedux } from '../../samples/WithRedux'
-import { WithContext } from '../../samples/WithContext'
-import { WithRxjs } from '../../samples/WithRxjs'
+
+import WithContext from '../../samples/WithContext/WithContext'
+import WithHOC from '../../samples/WithHOC/WithHOC'
+import WithProps from '../../samples/WithProps/WithProps'
+import WithRedux from '../../samples/WithRedux/WithRedux'
+import WithRxjs from '../../samples/WithRxjs/WithRxjs'
 import WithStateLifting from '../../samples/WithStateLifting'
 import WithZustand from '../../samples/WithZustand'
 

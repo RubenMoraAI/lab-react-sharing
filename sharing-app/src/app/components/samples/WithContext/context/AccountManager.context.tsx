@@ -18,7 +18,7 @@ export const AccountManagerProvider = ({ children }: { children: any }) => {
 
 export const useAccountManagerContext = () => {
   const context = useContext(AccountManagerContext)
-  if (context === undefined) {
+  if (Object.keys(context).length === 0) {
     throw new Error('AccountManagerContext must be used within a AccountManagerProvider')
   }
   return context

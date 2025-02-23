@@ -1,6 +1,8 @@
 'use client'
 
-import { VisualComponent, AccountBox } from '../../atomic'
+import AccountBox from "../../atomic/AccountBox"
+import VisualComponent from "../../atomic/VisualComponent"
+
 
 export interface ExchangeAccountProps {
   exchangeAmount: number

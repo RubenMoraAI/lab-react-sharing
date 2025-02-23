@@ -1,5 +1,6 @@
 'use client'
-import { VisualComponent, AccountBox } from '../../atomic'
+import AccountBox from '../../atomic/AccountBox'
+import VisualComponent from '../../atomic/VisualComponent'
 import { useAccount } from './hooks/useAccount'
 
 export const ExchangeAccount = () => {

@@ -1,5 +1,6 @@
 'use client'
-import { VisualComponent } from '../../atomic'
+
+import VisualComponent from "../../atomic/VisualComponent"
 
 export interface ExchangeProps {
   children: React.ReactNode

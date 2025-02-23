@@ -1,6 +1,6 @@
 'use client';
 
-import { VisualComponent } from '../../atomic';
+import VisualComponent from '../../atomic/VisualComponent';
 import WalletAccount from './WalletAccount';
 
 export const Wallet = () => {

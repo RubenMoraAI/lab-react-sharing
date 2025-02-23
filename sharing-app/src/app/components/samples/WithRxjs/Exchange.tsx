@@ -1,5 +1,5 @@
 'use client'
-import { VisualComponent } from '../../atomic'
+import VisualComponent from '../../atomic/VisualComponent'
 import ExchangeAccount from './ExchangeAccount'
 export const Exchange = () => {
   return (
