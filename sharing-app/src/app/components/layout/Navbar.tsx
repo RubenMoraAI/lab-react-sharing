@@ -5,15 +5,15 @@ import { AiOutlineRead } from 'react-icons/ai'
 import { AiFillGithub } from 'react-icons/ai'
 
 export const menu = [
-  { icon: <AiFillGithub className="  mx-1 text-xl" />, title: 'Github', url: 'https://github.com/RubenMoraVargas/ReactSharingLab' },
-  { icon: <AiOutlineRead className="  mx-1 text-xl" />, title: 'Read article', url: 'https://rubenmora.com/blog/react-sharing-data-lab' }
+  { icon: <AiFillGithub className="  mx-1 text-xl" />, title: 'Github', url: process.env.NEXT_PUBLIC_GITHUB_URL || '/' },
+  { icon: <AiOutlineRead className="  mx-1 text-xl" />, title: 'Read article', url: process.env.NEXT_PUBLIC_ARTICLE_URL || '/'  }
 ]
 
 export const Navbar = () => {
   return (
     <nav className="sm:px-4 py-2.5 bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="container flex flex-wrap justify-between items-center mx-auto w-full max-w-xl">
-        <Link href="https://rubenmora.com" className="ml-4 flex items-center">
+        <Link href={process.env.NEXT_PUBLIC_WEBSITE_URL || '/'} className="ml-4 flex items-center">
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Ruben Mora</span>
         </Link>
         <div className="justify-between items-center  flex  w-auto" id="navbar-sticky">
