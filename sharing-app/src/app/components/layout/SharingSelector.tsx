@@ -7,9 +7,9 @@ export const SharingSelector = () => {
   const id = useId()
   return (
     <div className="w-full flex justify-center rounded-md shadow-sm" role="group">
-      {sharingOptions.map(({ icon, value }, index: number) => (
+      {sharingOptions.map(({ value }, index: number) => (
         <button key={`${id}-${index}`} onClick={() => setShareOptionContextValue(value)} type="button" className={shareOptionContextValue === value ? 'btn-outline-pushed' : 'btn-outline'}>
-          {icon}
+
           <span className="first-letter:uppercase">{value}</span>
         </button>
       ))}
