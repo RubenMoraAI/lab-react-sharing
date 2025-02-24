@@ -8,10 +8,10 @@ import AccountBox from '../../atomic/AccountBox'
 export const ExchangeAccount = () => {
   const dispatcher = useDispatch()
 
-  const exchange = useSelector<RootState>(state => state.account.exchange)
+  const exchange = useSelector((state: RootState) => state.account.exchange)
 
   const sendToWallet = (amount: number) => {
-    dispatcher(sendFromExchangeToWallet( amount ))
+    dispatcher(sendFromExchangeToWallet(amount))
   }
 
   return (
