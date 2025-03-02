@@ -4,7 +4,7 @@ export const useAmounts = () => {
   const [amounts, setAmounts] = useState<{ exchange: number; wallet: number }>({ exchange: 0.1, wallet: 0.5 })
 
   const sendFromExchangeToWallet = (amount: number) => {
-    if (amounts.exchange < amount) return
+    if (amounts.exchange < amount || amount <0 ) return
 
     const exchange = Number((amounts.exchange - amount).toFixed(8))
     const wallet = Number((amounts.wallet + amount).toFixed(8))
@@ -13,7 +13,7 @@ export const useAmounts = () => {
   }
 
   const sendFromWalletToExchange = (amount: number) => {
-    if (amounts.wallet < amount) return
+    if (amounts.wallet < amount || amount <0 ) return
 
     const wallet = Number((amounts.wallet - amount).toFixed(8))
     const exchange = Number((amounts.exchange + amount).toFixed(8))

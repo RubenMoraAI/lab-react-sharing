@@ -7,8 +7,8 @@ export const WalletAccount = () => {
   const { amount, sendToWalletFromExchange } = useAmounts(0.5, 'wallet')
 
   return (
-    <VisualComponent title="Wallet account" amount={`Amount: ${amount}`}>
-      <AccountBox onClick={sendToWalletFromExchange} />
+    <VisualComponent title="Wallet account" amount={`Amount: ${amount.toFixed(2)}`}>
+      <AccountBox onClick={() => sendToWalletFromExchange(0.01)} />
     </VisualComponent>
   )
 }

@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint --fix",
     "test": "jest --watchAll",
+    "coverage": "jest --coverage",
     "prettier": "prettier --write \"./**/*.{ts,tsx,json}\"",
     "pretty": "prettier && lint"
   },

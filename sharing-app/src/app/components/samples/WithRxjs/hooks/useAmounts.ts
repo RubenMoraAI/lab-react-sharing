@@ -21,22 +21,20 @@ export const useAmounts = (initialAmount: number, type: 'wallet' | 'exchange') =
     return () => {
       subscription.unsubscribe()
     }
-  })
+  }, [observable$, type])
 
-  const sendToExchangeFromWallet = (newAmount: number) => {
-    if (amount < newAmount) return
-
-    setAmount(exchangeAmount => Number((exchangeAmount - newAmount).toFixed(8)))
-
-    rxjsShareSubject.setSubject({ exchange: 0, wallet: newAmount })
+  const sendToExchangeFromWallet = (amountToSend: number) => {
+    if (type === 'wallet' && amount >= amountToSend && amountToSend > 0) {
+      setAmount(walletAmount => Number((walletAmount - amountToSend).toFixed(8)))
+      rxjsShareSubject.setSubject({ wallet: -amountToSend, exchange: amountToSend })
+    }
   }
 
-  const sendToWalletFromExchange = (newAmount: number) => {
-    if (amount < newAmount) return
-
-    setAmount(exchangeAmount => Number((exchangeAmount - newAmount).toFixed(8)))
-
-    rxjsShareSubject.setSubject({ exchange: newAmount, wallet: 0 })
+  const sendToWalletFromExchange = (amountToSend: number) => {
+    if (type === 'exchange' && amount >= amountToSend && amountToSend > 0) {
+      setAmount(exchangeAmount => Number((exchangeAmount - amountToSend).toFixed(8)))
+      rxjsShareSubject.setSubject({ wallet: amountToSend, exchange: -amountToSend })
+    }
   }
 
   return { amount, sendToExchangeFromWallet, sendToWalletFromExchange }

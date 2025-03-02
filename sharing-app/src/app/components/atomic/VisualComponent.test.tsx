@@ -52,4 +52,36 @@ describe('VisualComponent', () => {
     expect(amount).toBeInTheDocument();
     expect(childContent).toBeInTheDocument();
   });
+
+  it('should render correctly without optional props', () => {
+    render(<VisualComponent title="Test Title" />);
+    const title = screen.getByText('Test Title');
+    const renderingSpan = screen.getByText('Rendering');
+
+    expect(title).toBeInTheDocument();
+    expect(renderingSpan).toBeInTheDocument();
+  });
+  it('should render with only the title and no optional props', () => {
+    render(<VisualComponent title="Test Title" />);
+    const title = screen.getByText('Test Title');
+
+    expect(screen.queryByText('Test Description')).not.toBeInTheDocument();
+    expect(screen.queryByText('100')).not.toBeInTheDocument();
+    expect(screen.queryByText('Child Content')).not.toBeInTheDocument();
+
+    expect(title).toBeInTheDocument();
+  });
+  it('should render correctly without children', () => {
+    render(<VisualComponent title="Test Title" description="Test Description" amount="100" />);
+    const title = screen.getByText('Test Title');
+    const description = screen.getByText('Test Description');
+    const amount = screen.getByText('100');
+
+    expect(title).toBeInTheDocument();
+    expect(description).toBeInTheDocument();
+    expect(amount).toBeInTheDocument();
+
+    expect(screen.queryByText('Child Content')).not.toBeInTheDocument();
+  });
+  
 });

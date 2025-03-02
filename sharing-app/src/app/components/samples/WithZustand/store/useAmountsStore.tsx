@@ -1,3 +1,4 @@
+// store/useAmountsStore.ts
 import { create } from 'zustand'
 
 interface AmountsState {
@@ -17,7 +18,7 @@ export const useAmountsStore = create<AmountsStore>(set => ({
   wallet: 0.5,
   sendFromExchangeToWallet: amount => {
     set(state => {
-      if (state.exchange < amount) return state
+      if (state.exchange < amount || amount < 0) return state
 
       const exchange = Number((state.exchange - amount).toFixed(8))
       const wallet = Number((state.wallet + amount).toFixed(8))
@@ -27,7 +28,7 @@ export const useAmountsStore = create<AmountsStore>(set => ({
   },
   sendFromWalletToExchange: amount => {
     set(state => {
-      if (state.wallet < amount) return state
+      if (state.wallet < amount || amount < 0) return state
 
       const wallet = Number((state.wallet - amount).toFixed(8))
       const exchange = Number((state.exchange + amount).toFixed(8))
